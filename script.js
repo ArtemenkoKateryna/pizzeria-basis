@@ -89,3 +89,100 @@ function removeElement() {
         alert("Немає елементів для видалення.");
     }
 }
+
+// Лабораторна робота 7
+
+function showPizzaOffer() {
+    document.getElementById("eventResult").textContent =
+        "Сьогодні діє акція: при замовленні великої піци напій у подарунок.";
+}
+
+let propertyButton = document.getElementById("propertyButton");
+
+propertyButton.onclick = function () {
+    document.getElementById("eventResult").textContent =
+        "Рекомендація дня: піца Пепероні з томатним соусом і сиром моцарела.";
+};
+
+let listenerButton = document.getElementById("listenerButton");
+
+function firstHandler() {
+    document.getElementById("eventResult").textContent =
+        "Ваше замовлення прийнято. Піца готується.";
+}
+
+function secondHandler() {
+    alert("Дякуємо за замовлення у піцерії Базіс!");
+}
+
+listenerButton.addEventListener("click", firstHandler);
+listenerButton.addEventListener("click", secondHandler);
+
+let removeHandlerButton = document.getElementById("removeHandlerButton");
+
+removeHandlerButton.addEventListener("click", function () {
+    listenerButton.removeEventListener("click", secondHandler);
+
+    document.getElementById("eventResult").textContent =
+        "Додаткове повідомлення після замовлення було скасовано.";
+});
+
+let eventBox = document.getElementById("eventBox");
+
+eventBox.addEventListener("mouseover", function () {
+    eventBox.classList.add("active");
+    eventBox.textContent = "Гаряча піца вже чекає на вас!";
+});
+
+eventBox.addEventListener("mouseout", function () {
+    eventBox.classList.remove("active");
+    eventBox.textContent = "Наведи мишкою, щоб побачити пропозицію";
+});
+
+let eventObject = {
+    handleEvent(event) {
+        document.getElementById("eventResult").textContent =
+            "Клік спрацював на блоці пропозиції піцерії.";
+    }
+};
+
+eventBox.addEventListener("click", eventObject);
+
+let pizzaList = document.getElementById("pizzaList");
+
+pizzaList.onclick = function (event) {
+    if (event.target.tagName === "LI") {
+        let items = pizzaList.querySelectorAll("li");
+
+        for (let item of items) {
+            item.classList.remove("selected");
+        }
+
+        event.target.classList.add("selected");
+
+        document.getElementById("eventResult").textContent =
+            "Ви обрали піцу: " + event.target.textContent;
+    }
+};
+
+let pizzaMenu = document.getElementById("pizzaMenu");
+
+pizzaMenu.addEventListener("click", function (event) {
+    let action = event.target.dataset.action;
+
+    if (!action) return;
+
+    let result = document.getElementById("menuResult");
+
+    if (action === "pizza") {
+        result.innerHTML = "<b>🍕 Піца:</b> Маргарита, Пепероні, Гавайська, Чотири сири.";
+    }
+
+    if (action === "drink") {
+        result.innerHTML = "<b>🥤 Напої:</b> кола, сік, чай, вода.";
+    }
+
+    if (action === "dessert") {
+        result.innerHTML = "<b>🍰 Десерти:</b> тірамісу, чизкейк, морозиво.";
+    }
+});

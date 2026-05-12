@@ -359,3 +359,80 @@ button:hover {
     padding: 8px;
     border-radius: 6px;
 }
+
+/* Лабораторна робота 7 */
+
+.events-block {
+    background-color: #fff8ed;
+    border: 2px solid #b34700;
+    border-radius: 12px;
+    padding: 15px;
+    margin: 15px 0;
+}
+
+.event-box {
+    background-color: #ffd08a;
+    border: 2px solid #8b1e12;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 15px 0;
+    font-weight: bold;
+    text-align: center;
+}
+
+.event-box.active {
+    background-color: #d35400;
+    color: white;
+}
+
+.pizza-list {
+    background-color: #fff8ed;
+    border: 2px solid #b34700;
+    border-radius: 12px;
+    padding: 15px 15px 15px 40px;
+}
+
+.pizza-list li {
+    padding: 8px;
+    cursor: pointer;
+}
+
+.pizza-list li.selected {
+    background-color: #ffd08a;
+    color: #8b1e12;
+    font-weight: bold;
+    border-radius: 6px;
+}
+
+.pizza-menu {
+    background-color: #fff8ed;
+    border: 2px solid #b34700;
+    border-radius: 12px;
+    padding: 15px;
+    margin: 15px 0;
+}
+
+#eventResult {
+    background-color: #fff8ed;
+    border-left: 5px solid #d35400;
+    padding: 10px;
+    border-radius: 6px;
+}
+.menu-panel {
+    background-color: #fff8ed;
+    border: 2px solid #b34700;
+    border-radius: 14px;
+    padding: 20px;
+    margin-bottom: 15px;
+}
+
+.menu-result-box {
+    background-color: #fffaf2;
+    border-left: 5px solid #d35400;
+    border-radius: 10px;
+    padding: 16px;
+    font-size: 24px;
+    color: #2b1a12;
+    margin-top: 10px;
+    min-height: 40px;
+}

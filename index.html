@@ -136,6 +136,44 @@
 
 <p id="jsText">Цей текст змінила за допомогою JavaScript.</p>
 
+<h2>Інтерактивна піцерія</h2>
+
+<div class="events-block">
+    <button onclick="showPizzaOffer()">Показати акцію</button>
+    <button id="propertyButton">Рекомендація дня</button>
+    <button id="listenerButton">Замовити піцу</button>
+    <button id="removeHandlerButton">Скасувати додаткове повідомлення</button>
+</div>
+
+<div id="eventResult" class="menu-result">
+    Оберіть дію або категорію меню.
+</div>
+
+<div id="eventBox" class="event-box">
+    Наведи мишкою, щоб побачити пропозицію
+</div>
+
+<h2>Вибір піци</h2>
+
+<ul id="pizzaList" class="pizza-list">
+    <li>Маргарита</li>
+    <li>Пепероні</li>
+    <li>Гавайська</li>
+    <li>Чотири сири</li>
+</ul>
+
+<h2>Меню піцерії</h2>
+
+<div id="pizzaMenu" class="pizza-menu">
+    <button data-action="pizza">🍕 Піца</button>
+    <button data-action="drink">🥤 Напої</button>
+    <button data-action="dessert">🍰 Десерти</button>
+</div>
+
+<div id="menuResult" class="menu-result-box">
+    Оберіть розділ меню.
+</div>
+
 <div id="newElements"></div>
     <script src="script.js"></script>  
 </body>
