@@ -3,24 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <title>Піцерія Базіс</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        a {
+            color: blue;
+        }
+
+        .special-link {
+            color: purple !important;
+        }
+    </style>
 </head>
 
-<body bgcolor="#fff2cc" link="red" vlink="green" alink="blue">
+<body>
 
-    <h1 id="top">Піцерія Базіс</h1>
+    <h1 id="top" class="main-title">Піцерія Базіс</h1>
 
-    <p><b>Директор:</b> Артеменко Катерина</p>
+    <p class="important-text"><b>Директор:</b> Артеменко Катерина</p>
 
-    <p>
+    <!-- Внутрішній стиль до абзацу -->
+    <p style="color: brown; font-size: 20px;">
         Це головна сторінка сайту піцерії <b>Базіс</b>.
     </p>
 
-    <p>
+    <p class="info-text">
         У нашій піцерії можна замовити смачну піцу, напої та інші страви.
     </p>
 
     <p>
-        <i>Сайт я стоворила для лабораторної роботи</i>
+        <i>Сайт я створила для лабораторної роботи.</i>
     </p>
 
     <h2>Навігація</h2>
@@ -39,7 +52,9 @@
     </p>
 
     <p>
-        <a href="https://www.google.com" target="_blank">Перейти на сторінку в інтернеті</a>
+        <a class="special-link" href="https://www.google.com" target="_blank">
+            Перейти на сторінку в інтернеті
+        </a>
     </p>
 
     <h2 id="images">Зображення</h2>
