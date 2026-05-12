@@ -186,3 +186,81 @@ pizzaMenu.addEventListener("click", function (event) {
         result.innerHTML = "<b>🍰 Десерти:</b> тірамісу, чизкейк, морозиво.";
     }
 });
+
+// Лабораторна робота 8
+
+// Лабораторна робота 8
+
+let mouseArea = document.getElementById("mouseArea");
+let mouseInfo = document.getElementById("mouseInfo");
+
+mouseArea.addEventListener("mouseover", function (event) {
+    if (!event.target.classList.contains("mouse-card")) return;
+
+    event.target.classList.add("active");
+
+    mouseInfo.textContent =
+        "Мишка наведена на елемент: " + event.target.textContent;
+});
+
+mouseArea.addEventListener("mouseout", function (event) {
+    if (!event.target.classList.contains("mouse-card")) return;
+
+    event.target.classList.remove("active");
+
+    let related = event.relatedTarget;
+
+    if (related && related.classList.contains("mouse-card")) {
+        mouseInfo.textContent = "Мишка перейшла на іншу піцу.";
+    } else {
+        mouseInfo.textContent = "Наведи мишку на піцу.";
+    }
+});
+
+mouseArea.addEventListener("mouseleave", function () {
+    mouseInfo.textContent = "Мишка вийшла за межі блоку з піцами.";
+});
+
+let dragPizza = document.getElementById("dragPizza");
+let dragArea = document.querySelector(".drag-area");
+
+let shiftX = 0;
+let shiftY = 0;
+let isDragging = false;
+
+dragPizza.addEventListener("mousedown", function (event) {
+    isDragging = true;
+
+    shiftX = event.clientX - dragPizza.getBoundingClientRect().left;
+    shiftY = event.clientY - dragPizza.getBoundingClientRect().top;
+
+    dragPizza.style.zIndex = 1000;
+});
+
+document.addEventListener("mousemove", function (event) {
+    if (!isDragging) return;
+
+    let areaRect = dragArea.getBoundingClientRect();
+
+    let newLeft = event.clientX - areaRect.left - shiftX;
+    let newTop = event.clientY - areaRect.top - shiftY;
+
+    if (newLeft < 0) newLeft = 0;
+    if (newTop < 0) newTop = 0;
+
+    if (newLeft > dragArea.clientWidth - dragPizza.offsetWidth) {
+        newLeft = dragArea.clientWidth - dragPizza.offsetWidth;
+    }
+
+    if (newTop > dragArea.clientHeight - dragPizza.offsetHeight) {
+        newTop = dragArea.clientHeight - dragPizza.offsetHeight;
+    }
+
+    dragPizza.style.left = newLeft + "px";
+    dragPizza.style.top = newTop + "px";
+});
+
+document.addEventListener("mouseup", function () {
+    isDragging = false;
+    dragPizza.style.zIndex = 1;
+});

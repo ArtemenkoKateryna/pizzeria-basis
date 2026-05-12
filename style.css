@@ -436,3 +436,65 @@ button:hover {
     margin-top: 10px;
     min-height: 40px;
 }
+
+/* Лабораторна робота 8 */
+
+.mouse-area {
+    background-color: #fff8ed;
+    border: 2px solid #b34700;
+    border-radius: 12px;
+    padding: 15px;
+    margin: 15px 0;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.mouse-card {
+    background-color: #ffd08a;
+    border: 2px solid #8b1e12;
+    border-radius: 10px;
+    padding: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.mouse-card.active {
+    background-color: #d35400;
+    color: white;
+}
+
+#mouseInfo {
+    background-color: #fff8ed;
+    border-left: 5px solid #d35400;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.drag-area {
+    position: relative;
+    height: 220px;
+    background-color: #fff8ed;
+    border: 2px dashed #b34700;
+    border-radius: 12px;
+    margin: 15px 0;
+    padding: 15px;
+}
+
+.drag-pizza {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    background-color: #d35400;
+    color: white;
+    border: 2px solid #8b1e12;
+    border-radius: 12px;
+    padding: 15px 20px;
+    font-weight: bold;
+    cursor: grab;
+    user-select: none;
+}
+
+.drag-pizza:active {
+    cursor: grabbing;
+}
