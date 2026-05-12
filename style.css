@@ -122,4 +122,76 @@ iframe {
     background-color: #e0e8ff;
 }
 
+/* Лаб 4 */
+
+nav p {
+    margin: 8px 0;
+}
+
+nav a {
+    display: block;
+    background-color: #fff8ed;
+    color: #8b1e12;
+    padding: 8px 12px;
+    border-radius: 6px;
+}
+
+nav a:hover {
+    background-color: #ffd08a;
+    color: #5c1208;
+}
+
+ul > li {
+    color: #8b1e12;
+    font-weight: bold;
+}
+
+ol li {
+    color: #2b1a12;
+}
+
+dl > dt {
+    color: #8b1e12;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+dl > dd {
+    margin-bottom: 10px;
+}
+
+table > caption {
+    color: #8b1e12;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+table img {
+    border: 3px solid #b34700;
+    border-radius: 8px;
+    padding: 3px;
+    background-color: white;
+}
+
+p b {
+    color: #8b1e12;
+}
+
+h2 + p {
+    background-color: #fff8ed;
+    border-left: 4px solid #d35400;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+h2 + nav {
+    margin-top: 10px;
+}
+
+h2 + table {
+    border: 3px solid #b34700;
+}
+
+
 
