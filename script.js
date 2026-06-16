@@ -187,7 +187,7 @@ pizzaMenu.addEventListener("click", function (event) {
     }
 });
 
-// Лабораторна робота 8
+
 
 // Лабораторна робота 8
 
